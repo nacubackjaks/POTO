@@ -1,0 +1,73 @@
+.mockup .tablet-mockup {
+  background: white;
+  width: 900px;
+  height: 760px;
+  position: relative;
+  border-radius: 30px;
+  box-shadow: 0 0 50px rgba(100, 100, 100, 0.25);
+}
+
+.mockup .tablet-mockup:before {
+  content: '';
+  position: absolute;
+  width: 97.5%;
+  height: 98.5%;
+  border-radius: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mockup .tablet-mockup .iframe-url {
+  position: absolute;
+  width: 800px;
+  height: 660px;
+  background-color: #333;
+  border: 1px solid #2c2c2c;
+  color: #fff;
+  font-size: 2rem;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mockup .tablet-mockup .iframe-url iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.mockup .tablet-mockup .home-btn {
+  position: absolute;
+  width: 400px;
+  height: 85px;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mockup .tablet-mockup .home-btn span {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+.mockup .tablet-mockup .home-btn span:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: inset 0 0 10px #606060;
+}
