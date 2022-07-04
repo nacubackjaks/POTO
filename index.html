@@ -9,40 +9,31 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/tablet-mockup.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="img/favicon.ico">
+
 
   <script>
     function MM_openBrWindow(theURL,winName,features){
       window.open(theURL,winName,features);
     }
-//반응형_기기별창연결하기 link
   </script>
-
-
-
-
-<!-- 
-트렌드 조사 html
-1.질문 = 메뉴바 아이콘 없어짐
-2. scss   over flow hidden 소스가 적용됨 
-3. 
-booking site neflfy에 다시 올리기 
--->
-
-
-
-
 </head>
-
 <body>
-
   <div id="wrap" class="load">
-
     <header>
       <canvas id="canvas"></canvas>
     </header>
 
-    <!-- <p id="txt1">0</p> -->
-    <!-- x -->
+    <div class="mouseBox">
+      <div class="mouse"> <!-- 마우스모양 -->
+        <span></span> <!-- 움직이는 마우스 휠 -->
+      </div>
+    <div class="arrow_down"> <!-- 화살표영역 -->
+      <span class="material-icons arrow1">keyboard_arrow_down</span> <!-- 화살표모양 -->
+      <span class="material-icons arrow2">keyboard_arrow_down</span>
+    </div> 
+    </div>
+  
     <div id="nav1">
       <nav>
         <ul id="qMenu">
@@ -83,7 +74,7 @@ booking site neflfy에 다시 올리기
           <div class="pro">
 
             <a><img src="star_logo.svg" alt="starlogo"></a>
-            <h2>PROFILE</h2>
+            <h2>01 PROFILE</h2>
             <ul>
               <li><b>이름</b> 황자경</li>
               <li><b>생년월일</b> 1998-07-27</li>
@@ -91,18 +82,18 @@ booking site neflfy에 다시 올리기
               <li><b>이메일</b>hijkayung@daum.net</li>
 
               <li>
-                <p>학력</p>
+                <p class="certif">학력</p>
               </li>
               <li><b>2017.02 ~ 2021.06</b>
                 <p>한림대학교 청각학과, 미디어커뮤니케이션학과 졸업</p>
               </li>
               <li>
                 <b>2021.12.29 ~ 2021.07.05</b>
-                <p>이젠 아카데미 종로 스마트 웹콘텐츠 UI/UX 디자인<br>& 퍼블리셔 과정 수료</p>
+                <p>이젠 아카데미 종로 스마트 웹콘텐츠 UI/UX 디자인&amp; 퍼블리셔 과정 수료</p>
               </li>
 
               <li>
-                <p>자격증</p>
+                <p class="certif">자격증</p>
               </li>
               <li><b>2022. 06. 29</b>웹디자인기능사 (실기예정)</li>
               <li><b>2022. 03. 18</b>일러스트</li>
@@ -174,6 +165,7 @@ booking site neflfy에 다시 올리기
       </section>
       <!--======= Web design ======= -->
       <section id="p2" class="section" data-anchor="part2">
+        <h2>02</h2>
         <h2>WEBDESIGN</h2>
 
         <div id="tabmenu">
@@ -401,7 +393,7 @@ booking site neflfy에 다시 올리기
                 <li class="btn_close"><i class="material-icons">clear</i></li>
                 <li class="left_btn"><i class="material-icons">keyboard_arrow_left</i></li>
                 <li class="right_btn"><i class="material-icons">keyboard_arrow_right</i></li>
-                <li class="g_page2"><span>1</span> / <span>14</span></li>
+                <li class="g_page2"><span>1</span> / <span>15</span></li>
               </ul>
 
               <ul class="m_btn3">
@@ -757,7 +749,7 @@ booking site neflfy에 다시 올리기
                     <div class="pt1_img">
                       <img src="uiux/iherb.jpg" alt="iherb">
                     </div>
-                  	<a href="#" class="close">close</a>
+                  	<a href="#none" class="close">X</a>
  
                </div>
                <!-- gui Site!!!!!!!!!!!!!!!!!!!!!!! -->
@@ -796,9 +788,9 @@ booking site neflfy에 다시 올리기
                     </p>
                   </li>
                </ul>
+
                <a href="#none" onclick="MM_openBrWindow('img/storybord.pdf','win','scrollbars=no,width=360px,height:940px,top=100px,left=100px')"><span class="ptb_gul">크게보기</span></a>
-               <a href="#none" onclick="MM_openBrWindow('img/storybord.pdf','win','scrollbars=no,width=360px,height:940px,top=100px,left=100px')"><span class="ptb_gul">크게보기</span></a>
-               <a href="#none" onclick="MM_openBrWindow('https://scgroup.netlify.app/','win','scrollbars=no,width=490px,height=940px,top=100px,left=500px')"><span class="ptb_gul2">사이트방문</span></a>
+               <a href="#none" onclick="MM_openBrWindow('https://scgroup.netlify.app/','win','scrollbars=no,width=1400px,height=940px,top=100px,left=500px')"><span class="ptb_gul2">사이트방문</span></a>
              </div>
             </li>
 
@@ -910,7 +902,7 @@ booking site neflfy에 다시 올리기
        </div>
        
        <div class="fCenter">
-        <p class="fo_text"> 귀하의 귀한 시간을 내어주어 감사합니다. </p>
+        <p class="fo_text"> 귀하의 귀중한 시간을 내어주어 감사합니다. </p>
          <p class="foot_text" id="typing2"></p>
        </div>
 

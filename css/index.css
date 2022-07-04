@@ -22,10 +22,64 @@ body::-webkit-scrollbar-track {
   background-color: #fff; /*스크롤바 트랙 색상*/
 }
 
+   /* 마우스휠 animation */
+   @keyframes line_down{
+    from{top:10px; opacity:0.5}
+    to{top:40px; opacity:0;}
+  }
+  /* 화살표 animation */
+  @keyframes arrow_down{
+    0%{opacity:0;}
+    100%{opacity:0.5;}
+    0%{opacity:0;}
+  }
+  .mouseBox{
+    position:absolute; /* 부모설정 */
+    bottom:-2px;
+    left:50%;
+    width:100px;
+    height:200px;
+   /*  background:yellow; */
+  }
+  .mouseBox .mouse{
+    position:relative; /* 부모설정->마우스모양안에서 휠의 위치를 잡기위함 */
+    width:40px;
+    height:65px;
+    border-radius:30px;
+    border:4px solid rgb(200, 200, 200);
+    margin:0 auto;
+  }
+  .mouseBox .mouse span{ /* 마우스휠모양 */
+    width:6px;
+    height:16px;
+    background:rgb(146, 146, 146);
+    border-radius:20px;
+    position:absolute;
+    top:10px;
+    left:17px;
+    animation:line_down 1s infinite; 
+  }
 
-/* #txt1{position:fixed;top:10px;right:10px;z-index:9999;}   */
-/* 스크롤바 위치확인x */
+  .mouseBox .arrow_down .arrow1{
+    font-size:55px;
+    color:rgb(200, 200, 200);
+    position:absolute;
+    top:70px;
+    left:23px;
+    animation:arrow_down 1s infinite alternate;/* 0%->100%->0% */
+    animation-delay:1s;
+  }
+  .mouseBox .arrow_down .arrow2{
+    font-size:55px;
+    color:rgb(200, 200, 200);
+    position:absolute;
+    top:90px;
+    left:23px;
+    animation:arrow_down 1s infinite alternate;
+    animation-delay:1.5s;
+  }
 
+ 
 #canvas {
   display: block;
   width: 100%;
@@ -77,30 +131,8 @@ nav ul li :hover{
 
   color: #8c119c;
 }
-/* nav ul {
-  width: 230px;
-}
 
-nav ul li {
-  line-height: 50px;
-  text-align: right;
-}
-
-nav ul li i {
-  color: #000;
-
-}
-
-nav ul li :hover i {
-  color: #8c119c;
-}
-
-nav ul li span {
-  display: none;
-  color: gray;
-}
- */
-/* ///////////////////////////////////////////////////////// */
+/* //////profile////////////// */
 .ball {
   height: 215px;
   position: absolute;
@@ -146,14 +178,14 @@ nav ul li span {
   text-align: center;
   z-index: 1;
   position: absolute;
-  top: 10%;
+  top: 25%;
   left: -3%;
   animation: circle_ 3s alternate infinite;
 }
 
 .profile .prof
 img { /* profile img !!!!  */
-  padding-top: 120px;
+  padding-top: 250px;
   float: left;
   width: 400px;
 }
@@ -190,30 +222,27 @@ img { /* profile img !!!!  */
   margin: 0 auto;
 }
 
-/* .pro ul li span {
-  line-height: 20px;
-  font-weight: bold;
-  background: #fffbc0;
-  width: 60px;
-  margin: 5px auto;
-  text-align: center;
-} */
 
 .pro ul li {
   width: 400px;
   margin: 0 auto;
   text-align: left;
-  /*     background:lightgray; */
+
   margin-top: 10px;
 }
-
+.pro .certif{
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+  background: #fffbc0;
+  height:25px;
+  line-height:25px;
+}
 .pro ul li b {
   padding-right: 10px;
 }
 
-/* .pro ul li > p {
-  padding-top: 5px;
-} */
+
 
 .container {
   margin-top: 20px;
@@ -224,6 +253,7 @@ img { /* profile img !!!!  */
   padding-left:50px;
   margin-top:30px;
   text-transform: uppercase;
+  font-family: 'Stoke', serif;
 }
 
 .title {
@@ -543,8 +573,6 @@ img { /* profile img !!!!  */
   background-size : cover;
   position: relative;
 }
-#p3 h2{font-size:20px;}
-
 
  .webd_in{/* 텍스트와 디자인화면 전체영역 */
   width:1200px;
@@ -566,8 +594,8 @@ img { /* profile img !!!!  */
 }
 
 .w_title h2{
+  font-family: 'Stoke', serif;
   float:left;
-  font-size:120px;
   font-weight:normal;
   letter-spacing:-5px;
   color:rgb(14, 14, 14);
@@ -577,7 +605,7 @@ img { /* profile img !!!!  */
 .w_title p{
   float:left;
   font-family:'Raleway', sans-serif;
-  font-size:15px;
+  font-size:19px;
   font-weight:normal;
   color:rgb(85, 84, 84);
   margin-left:10px;
@@ -585,7 +613,7 @@ img { /* profile img !!!!  */
   text-shadow:-7px 10px 4px rgba(0,0,0,0.3);
 }
 .w_title p strong{
-  font-size:32px;
+  font-size:35px;
   font-weight:700;
   text-indent:10px;
   color:rgb(23, 23, 23);
@@ -618,10 +646,10 @@ img { /* profile img !!!!  */
   float:left;
   width:30px;
   height:20px;
-  font-size:40px;
-  margin-left:-8px;
+  font-size:50px;
+  margin-left:-22px;
   line-height:25px;
-  color:rgb(226, 154, 154);
+  color:rgb(14, 250, 183);
   text-shadow:-7px 10px 4px rgba(0,0,0,0.3);
  /*  position:absolute; */
   opacity:0;
@@ -637,7 +665,7 @@ img { /* profile img !!!!  */
 }
 .w_list li{
   float:left;
-  font-size:20px;
+  font-size:25px;
   font-weight: 700;
   padding:0 5px;
   color:#999;
@@ -794,6 +822,7 @@ img { /* profile img !!!!  */
 }
 
 .r_title h2{
+  font-family: 'Stoke', serif;
   float:left;
   font-size:120px;
   font-weight:normal;
@@ -1034,6 +1063,7 @@ img { /* profile img !!!!  */
   text-shadow: rgb(184, 184, 184, 0.5) 2px 2px 1px;
 }
 .b_title h2{
+  font-family: 'Stoke', serif;
   font-size:120px;
 }
 .b_title p strong{
@@ -1143,6 +1173,31 @@ img { /* profile img !!!!  */
   margin-top:67px;
   margin-left:24px;
 }
+/* popup booking */
+.pop5{ /* 검정배경 */
+  display: none;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.8);
+  z-index:999;
+  overflow-y:scroll;
+}
+.c5{/* 모바일용 */
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width:425px;
+  height:727px;
+  background:url(../img/mobile_view.png) no-repeat center center;
+}
+.c5 iframe{
+  margin-top:67px;
+  margin-left:24px;
+}
 
 /* Web planing */
 #p6{
@@ -1231,6 +1286,7 @@ img { /* profile img !!!!  */
   position:relative;
 }
 .ppanel li h2{
+
   text-align: center;
   font-size:35px;
 }
@@ -1354,10 +1410,12 @@ img { /* profile img !!!!  */
 .pbt .close{ /*close버튼설정*/
    /*닫기*/
   position:fixed; 
-  right:30px; 
-  top:30px; 
+  right:350px; 
+  top:10px; 
   color:#fff; 
+  font-size:50px;
 }
+
 /* footer_______________________ */
 footer{
   width:100%;

@@ -158,17 +158,33 @@ new Visual();
 
 
 
+//skill2
+$(window).scroll(function(){
 
+  let wscroll= $(this).scrollTop();
 
+  /* 프로필(scrolls1),교육이수영역(scrolls2) */
+  if($(this).scrollTop()>=728 && $(this).scrollTop()<1535)
+  if(wscroll>=300){
+      $(".scrolls1, .scrolls2").css({"transform":"none","opacity":"1"}); //밀어넣은 위치 설정 취소(none)
+  }else{
+      $(".scrolls1").css({"transform":"translate(200px,0px)","opacity":"0"});
+      $(".scrolls2").css({"transform":"translate(-200px,0px)","opacity":"0"});
+  }
 
+  /* skill=======*/
+  if(wscroll>=792){
+    $(".bar").each(function(){
+      $(this).find(".bar-inner").animate({
+        width: $(this).attr("data-width")
+      },2000)
+    });
+  }else{
+      $(".bar-inner").removeClass(".data-width");
+  }
 
-
-/* skill bar _________________________*/
-$(".bar").each(function(){
-  $(this).find(".bar-inner").animate({
-    width: $(this).attr("data-width")
-  },2000)
 });
+
 
 
 //nav menu right bottom
@@ -392,7 +408,7 @@ $(window).scroll(function(){
   //오른쪽 상단 버튼-다음보기
   $(".m_btn2 .right_btn").click(function(){
 
-    if(k_pop<14){
+    if(k_pop<15){
 
       $(".pop2>li").eq(k_pop).stop().fadeOut(); //기존거 사라짐
       k_pop++;
